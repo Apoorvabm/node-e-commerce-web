@@ -5,10 +5,11 @@ const create_stock = async (req,res)=>{
     // res.send('testing..')
    const item = new Stock(req.body) 
     try{
-        await user.save()
+        await item.save()
         res.status(201).send(item)
     }
     catch(e){
+        console.log(e)
         res.status(400).send(e)
     }
 }
